@@ -1,0 +1,286 @@
+:root {
+    --beige: #eee;
+    --green: #335036;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Alata', 'Rubik', Verdana, Geneva, Tahoma, sans-serif;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: .2s linear;
+}
+
+html {
+    font-size: 50%;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+    overflow-x: hidden;
+}
+
+section{
+    padding: 2rem 9%;
+}
+
+.btn{
+    display: inline-block;
+    margin-top: 3rem;
+    border-radius: 10rem;
+    background: #335036;
+    padding: 1rem 3.7rem;
+    cursor: pointer;
+    font-size: 2rem;
+    color:#fff;
+}
+
+.btn:hover{
+    background: var(--beige);
+    color:#335036
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: rgba(255, 255, 255, 0.5);
+    padding: 2rem 9%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+}
+
+header .logo {
+    font-size: 3rem;
+    color: #335036;
+    font-weight: 900; /* Extra bold */
+    font-family: 'Playfair Display', serif;
+    transition: color 0.3s ease;
+}
+
+header .logo:hover {
+    color: var(--beige);
+}
+
+header .logo span {
+    color: var(--beige);
+}
+
+header .navbar a {
+    font-size: 1.5rem;
+    padding: 0 2.65rem;
+    color: #335036;
+    font-family: 'Rubik', serif;
+}
+
+header .navbar a:hover {
+    color: var(--beige);
+}
+
+header .icons a {
+    font-size: 2.5rem;
+    color: #335036;
+    margin-left: 1.5rem;
+}
+
+header .icons a:hover {
+    color: var(--beige);
+}
+
+header #toggler {
+    display: none;
+}
+
+header .fa-bars {
+    font-size: 3rem;
+    color: #335036;
+    border-radius: .5rem;
+    padding: .5rem 1.5rem;
+    cursor: pointer;
+    border: .1rem solid rgba(0, 0, 0, .1);
+    display: none;
+}
+
+.home{
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    background:url(../Downloads/amsterdam.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.home .content{
+    max-width: 100rem;
+}
+
+.home .content .content-block{
+    background: rgba(51, 80, 54, 0.90);
+    padding: 2rem;
+    flex-shrink:0;
+}
+
+.home .content h3{
+    font-size: 8rem;
+    color: #fff;
+    font-family: 'Playfair Display';
+    margin-bottom: 3rem;
+    animation: fadeIn 1s ease-in-out 0s forwards;
+}
+
+.home .content span{
+    font-size: 2rem;
+    color: #fff;
+    padding:1rem 0;
+    line-height: 1.3;
+    font-family: 'Rubik';
+}
+
+.home .content p{
+    font-size: 1.5rem;
+    color: #fff;
+    padding:1rem 0;
+    line-height: 1.3;
+    font-family: 'Rubik';
+}
+
+.about .content h1{
+    font-size: 7rem;
+    color: #000000;
+    padding: 1rem;
+    margin-top: 5rem;
+    font-weight: 900;
+    font-family: 'Playfair Display', serif;
+}
+
+.about .content p{
+    font-size: 2rem;
+    color: #333;
+    padding: 1rem;
+    font-family: 'Rubik';
+}
+
+.about .row{
+    display: flex;
+    align-items: left;
+    gap:2rem;
+    flex-wrap: wrap;
+    padding:2rem 0;
+    padding-bottom: 3rem;
+}
+
+.about .row .image-container{
+    flex:1 1 40rem;
+    position: relative;
+    width:100%;
+    padding-top: 60%; /* 4:3 aspect ratio (3/4 * 100 = 75) */
+    overflow: hidden;
+    border-radius: .5rem;
+    border: 1.5rem solid #fff;
+}
+
+.about .row .image-container img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure image covers the container */
+    border-radius: .5rem;
+    border: none;
+}
+
+.about .row .content{
+    flex:1 1 40rem;
+}
+
+.about .row .content p{
+    font-size: 2rem;
+    color: #000000;
+    line-height: 1.5;
+    margin-top: 3rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* media queries */
+@media (max-width: 991px) {
+    html {
+        font-size: 45%;
+    }
+    
+    header {
+        padding: 1rem;
+    }
+    
+}
+
+@media (max-width: 768px) {
+    header .fa-bars {
+        display: block;
+    }
+
+    header .navbar {
+        position: absolute;
+        top: 100%; 
+        left: 0;
+        right: 0;
+        background: rgba(238, 238, 238, 0.8);
+        border-top: .1rem solid rgba(0, 0, 0, .1);
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+        visibility: hidden;
+        opacity: 0;
+        transition: visibility 0s, opacity 0.2s linear;
+    }
+
+    .home .content h3{
+        font-size: 6rem;
+    }
+
+    header #toggler:checked ~ .navbar {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+        visibility: visible;
+        opacity: 1;
+    }
+
+    header .navbar a {
+        margin: 1rem;
+        padding: 1rem;
+        background: rgba(238, 238, 238, 0.8);
+        border: .1rem solid rgba(0, 0, 0, .1);
+        display: block;
+    }
+    header .navbar a:hover {
+        color: var(--beige);
+        background: var(--green);
+    }
+}
+
+@media (max-width: 450px) {
+    html {
+        font-size: 50%;
+    }
+    
+    header {
+        padding: 1rem;
+    }
+}
