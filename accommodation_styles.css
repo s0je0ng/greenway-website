@@ -138,6 +138,9 @@ header .fa-bars {
 
 .accommodation-item img {
     max-width: 40%;
+    width: 713px; /* Specify the width you want */
+    height: 476px; /* Specify the height you want */
+    max-width: 100%; /* Ensure it doesn't exceed its container */
     border-radius: 10px;
 }
 
