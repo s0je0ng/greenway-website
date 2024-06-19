@@ -3,7 +3,6 @@
     --green: #335036;
 }
 
-
 * {
     margin: 0;
     padding: 0;
@@ -20,6 +19,10 @@ html {
     scroll-behavior: smooth;
     scroll-padding-top: 6rem;
     overflow-x: hidden;
+}
+
+section{
+    padding: 2rem 9%;
 }
 
 header {
