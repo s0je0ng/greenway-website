@@ -1,0 +1,351 @@
+:root {
+    --beige: #eee;
+    --green: #335036;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Alata', 'Rubik', Verdana, Geneva, Tahoma, sans-serif;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    transition: .2s linear;
+}
+
+html {
+    font-size: 50%;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+    overflow-x: hidden;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 2rem 9%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+}
+
+header .logo {
+    font-size: 3rem;
+    color: #335036;
+    font-weight: 900; /* Extra bold */
+    font-family: 'Playfair Display', serif;
+    transition: color 0.3s ease;
+}
+
+header .logo:hover {
+    color: var(--beige);
+}
+
+header .logo span {
+    color: var(--beige);
+}
+
+header .navbar a {
+    font-size: 1.5rem;
+    padding: 0 2.65rem;
+    color: #335036;
+    font-family: 'Rubik', serif;
+}
+
+header .navbar a:hover {
+    color: var(--beige);
+}
+
+header .icons a {
+    font-size: 2.5rem;
+    color: #335036;
+    margin-left: 1.5rem;
+}
+
+header .icons a:hover {
+    color: var(--beige);
+}
+
+header #toggler {
+    display: none;
+}
+
+header .fa-bars {
+    font-size: 3rem;
+    color: #335036;
+    border-radius: .5rem;
+    padding: .5rem 1.5rem;
+    cursor: pointer;
+    border: .1rem solid rgba(0, 0, 0, .1);
+    display: none;
+}
+
+
+.description {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: linear-gradient(180deg, #427373 0%, #8DB59A 54.5%, #53888B 83.5%, #5E82B9 100%);
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+}
+
+.description .content h3{
+    font-size: 11rem;
+    color: #fff;
+    font-family: 'Playfair Display';
+    margin-bottom: 3rem;
+}
+
+.description .content span{
+    font-size: 5rem;
+    color: #fff;
+    font-family: 'Alata';
+    margin-bottom: 2.5rem;
+}
+
+.description .content p{
+    font-size: 2rem;
+    color: #fff;
+    font-family: 'Alata';
+    margin-bottom: 2.5rem;
+}
+
+
+.accommodations-list {
+    padding: 2rem 20%;
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+}
+
+.accommodation-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #f9f9f9;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.accommodation-item img {
+    max-width: 40%;
+    border-radius: 10px;
+}
+
+.accommodation-item .text {
+    max-width: 50%;
+}
+
+.accommodation-item h3 {
+    font-size:6rem;
+    color: #000000;
+    margin-bottom: 1rem;
+}
+
+.accommodation-item h4 {
+    font-size: 6rem;
+    color: #000000;
+    margin-bottom: 1.5rem;
+}
+
+.accommodation-item p {
+    font-size: 3rem;
+    color: #333;
+    margin-bottom: 5rem;
+}
+
+.accommodation-item .btn {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background-color: #335036;
+    color: #fff;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-size: 2rem;
+    transition: background-color 0.3s ease;
+}
+
+.accommodation-item .btn:hover {
+    background-color: #8DB59A;
+}
+
+.accommodation-item:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.accommodation-item:nth-child(even) .text {
+    text-align: left;
+    margin-left: 0;
+    margin-right: auto;
+    padding-left: 10rem;
+    padding-right: 0rem;
+}
+
+.accommodation-item:nth-child(odd) .text {
+    text-align: left;
+    margin-right: 0;
+    margin-left: auto;
+    padding-right: 10rem;
+    padding-left: 0rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.footer .box-container{
+    display: flex;
+    flex-wrap:wrap;
+    gap: 1.5rem;
+}
+
+.footer .box-container .box{
+    flex: 1 1 25rem;
+}
+
+.footer .box-container .box h3{
+    color: #333;
+    font-size: 2.5rem;
+    padding:1rem 0;
+}
+
+.footer .box-container .box a{
+    display: block;
+    color: #666;
+    font-size: 1.5rem;
+    padding:1rem 0;
+}
+
+.footer .box-container .box a:hover{
+    color:var(--beige)
+}
+
+.credit{
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    font-size: 1rem;
+    color: var(--beige);
+    border-top:.1rem solid rgba(0, 0, 0, .1);
+    background: rgba(51, 80, 54, 0.90);
+}
+
+.credit span{
+    color:var(#fff);
+}
+
+
+
+
+
+
+
+
+
+
+
+/* media queries */
+@media (max-width: 991px) {
+    html {
+        font-size: 45%;
+    }
+    
+    header {
+        padding: 1rem;
+    }
+    .description .content h3{
+        font-size: 8rem;
+    }
+    .description .content span{
+        font-size: 4rem;
+    }
+}
+
+@media (max-width: 768px) {
+    header .fa-bars {
+        display: block;
+    }
+
+    header .navbar {
+        position: absolute;
+        top: 100%; 
+        left: 0;
+        right: 0;
+        background: rgba(238, 238, 238, 0.8);
+        border-top: .1rem solid rgba(0, 0, 0, .1);
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+        visibility: hidden;
+        opacity: 0;
+        transition: visibility 0s, opacity 0.2s linear;
+    }
+    header #toggler:checked ~ .navbar {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+        visibility: visible;
+        opacity: 1;
+    }
+
+    header .navbar a {
+        margin: 1rem;
+        padding: 1rem;
+        background: rgba(238, 238, 238, 0.8);
+        border: .1rem solid rgba(0, 0, 0, .1);
+        display: block;
+    }
+    header .navbar a:hover {
+        color: var(--beige);
+        background: var(--green);
+    }
+    .description .content h3{
+        font-size: 6rem;
+    }
+    .description .content span{
+        font-size: 2.5rem;
+    }
+    .description .content p{
+        font-size: 1.5rem;
+    }
+}
+
+
+
+@media (max-width: 450px) {
+    html {
+        font-size: 50%;
+    }
+    
+    header {
+        padding: 1rem;
+    }
+
+    .description .content h3{
+        font-size: 5rem;
+    }
+    .description .content span{
+        font-size: 2rem;
+    }
+    .description .content p{
+        font-size: 1rem;
+    }
+}
