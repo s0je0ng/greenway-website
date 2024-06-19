@@ -165,6 +165,7 @@ header .fa-bars {
     background-color: #fff;
     background-size: cover;
     justify-content: space-between;
+    padding: 0 20%;
 }
 
 .bike .content .content-block h3{
@@ -227,7 +228,7 @@ header .fa-bars {
     color:var(--beige)
 }
 
-.footer .credit{
+.credit{
     text-align: center;
     padding: 1.5rem;
     margin-top: 1.5rem;
@@ -238,7 +239,7 @@ header .fa-bars {
     background: rgba(51, 80, 54, 0.90);
 }
 
-.footer .credit span{
+.credit span{
     color:var(#fff);
 }
 
