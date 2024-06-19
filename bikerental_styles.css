@@ -168,14 +168,14 @@ header .fa-bars {
 }
 
 .bike .content .content-block h3{
-    font-size: 7rem;
+    font-size: 6rem;
     color: #000000;
     font-family: 'Alata';
     margin-bottom: 1rem;
 }
 
 .bike .content .content-block span{
-    font-size: 7rem;
+    font-size: 6rem;
     color: #000000;
     font-family: 'Alata';
     margin-bottom: 3rem;
@@ -183,7 +183,7 @@ header .fa-bars {
 
 .bike .content .content-block p{
     font-size: 3rem;
-    color: #000000;
+    color: #333;
     font-family: 'Alata';
     margin-bottom: 2.5rem;
 }
@@ -200,7 +200,47 @@ header .fa-bars {
 
 
 
+.footer .box-container{
+    display: flex;
+    flex-wrap:wrap;
+    gap: 1.5rem;
+}
 
+.footer .box-container .box{
+    flex: 1 1 25rem;
+}
+
+.footer .box-container .box h3{
+    color: #333;
+    font-size: 2.5rem;
+    padding:1rem 0;
+}
+
+.footer .box-container .box a{
+    display: block;
+    color: #666;
+    font-size: 1.5rem;
+    padding:1rem 0;
+}
+
+.footer .box-container .box a:hover{
+    color:var(--beige)
+}
+
+.footer .credit{
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    font-size: 1rem;
+    color: var(--beige);
+    border-top:.1rem solid rgba(0, 0, 0, .1);
+    background: rgba(51, 80, 54, 0.90);
+}
+
+.footer .credit span{
+    color:var(#fff);
+}
 
 
 
@@ -244,6 +284,10 @@ header .fa-bars {
         font-size: 5rem;
     }
 
+    .description .content p {
+        font-size: 2rem;
+    }
+
     header #toggler:checked ~ .navbar {
         clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
         visibility: visible;
@@ -277,7 +321,7 @@ header .fa-bars {
     }
 
     .description .content p {
-        font-size: 0.5rem;
+        font-size: 1rem;
     }
 }
 
