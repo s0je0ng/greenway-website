@@ -1,0 +1,299 @@
+:root {
+    --beige: #eee;
+    --green: #335036;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Alata', 'Rubik', Verdana, Geneva, Tahoma, sans-serif;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    transition: .2s linear;
+}
+
+html {
+    font-size: 50%;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+    overflow-x: hidden;
+}
+
+section{
+    padding: 2rem 9%;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 2rem 9%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+}
+
+header .logo {
+    font-size: 3rem;
+    color: #335036;
+    font-weight: 900; /* Extra bold */
+    font-family: 'Playfair Display', serif;
+    transition: color 0.3s ease;
+}
+
+header .logo:hover {
+    color: var(--beige);
+}
+
+header .logo span {
+    color: var(--beige);
+}
+
+header .navbar a {
+    font-size: 1.5rem;
+    padding: 0 2.65rem;
+    color: #335036;
+    font-family: 'Rubik', serif;
+}
+
+header .navbar a:hover {
+    color: var(--beige);
+}
+
+header .icons a {
+    font-size: 2.5rem;
+    color: #335036;
+    margin-left: 1.5rem;
+}
+
+header .icons a:hover {
+    color: var(--beige);
+}
+
+header #toggler {
+    display: none;
+}
+
+header .fa-bars {
+    font-size: 3rem;
+    color: #335036;
+    border-radius: .5rem;
+    padding: .5rem 1.5rem;
+    cursor: pointer;
+    border: .1rem solid rgba(0, 0, 0, .1);
+    display: none;
+}
+
+
+.travel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: url(Download/travel.webp) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.travel .content {
+    max-width: 100rem;
+    text-align: center;
+}
+
+.travel .content h3 {
+    font-size: 12rem;
+    color: #fff;
+    font-family: 'Playfair Display';
+    margin-bottom: 3rem;
+}
+
+.description{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #E1E6E0;
+    background-size: cover;
+    background-position: center;
+}
+
+.description .content{
+    max-width: 100rem;
+    text-align: center;
+}
+
+.description .content h3 {
+    font-size: 7rem;
+    color: #333;
+    font-family: 'Alata';
+    margin-bottom: 2.5rem;
+}
+.description .content p {
+    font-size: 3rem;
+    color: #333;
+    font-family: 'Alata';
+    margin-bottom: 3rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.footer .box-container{
+    display: flex;
+    flex-wrap:wrap;
+    gap: 1.5rem;
+}
+
+.footer .box-container .box{
+    flex: 1 1 25rem;
+}
+
+.footer .box-container .box h3{
+    color: #333;
+    font-size: 2.5rem;
+    padding:1rem 0;
+}
+
+.footer .box-container .box a{
+    display: block;
+    color: #666;
+    font-size: 1.5rem;
+    padding:1rem 0;
+}
+
+.footer .box-container .box a:hover{
+    color:var(--beige)
+}
+
+.credit{
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    font-size: 1rem;
+    color: var(--beige);
+    border-top:.1rem solid rgba(0, 0, 0, .1);
+    background: rgba(51, 80, 54, 0.90);
+}
+
+.credit span{
+    color:var(#fff);
+}
+
+
+
+
+
+
+
+
+
+
+
+/* media queries */
+@media (max-width: 991px) {
+    html {
+        font-size: 45%;
+    }
+    
+    header {
+        padding: 1rem;
+    }
+    .description .content h3{
+        font-size: 8rem;
+    }
+    .description .content span{
+        font-size: 4rem;
+    }
+}
+
+@media (max-width: 768px) {
+    header .fa-bars {
+        display: block;
+    }
+
+    header .navbar {
+        position: absolute;
+        top: 100%; 
+        left: 0;
+        right: 0;
+        background: rgba(238, 238, 238, 0.8);
+        border-top: .1rem solid rgba(0, 0, 0, .1);
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+        visibility: hidden;
+        opacity: 0;
+        transition: visibility 0s, opacity 0.2s linear;
+    }
+    header #toggler:checked ~ .navbar {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+        visibility: visible;
+        opacity: 1;
+    }
+
+    header .navbar a {
+        margin: 1rem;
+        padding: 1rem;
+        background: rgba(238, 238, 238, 0.8);
+        border: .1rem solid rgba(0, 0, 0, .1);
+        display: block;
+    }
+    header .navbar a:hover {
+        color: var(--beige);
+        background: var(--green);
+    }
+    .description .content h3{
+        font-size: 6rem;
+    }
+    .description .content span{
+        font-size: 2.5rem;
+    }
+    .description .content p{
+        font-size: 1.5rem;
+    }
+}
+
+
+
+@media (max-width: 450px) {
+    html {
+        font-size: 50%;
+    }
+    
+    header {
+        padding: 1rem;
+    }
+
+    .description .content h3{
+        font-size: 5rem;
+    }
+    .description .content span{
+        font-size: 2rem;
+    }
+    .description .content p{
+        font-size: 1rem;
+    }
+}
