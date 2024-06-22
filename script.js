@@ -49,16 +49,14 @@ document.addEventListener('DOMContentLoaded', function() {
             return;
         }
 
-        const start = selectedLocations[0];
-        const end = selectedLocations[selectedLocations.length - 1];
-        const waypoints = selectedLocations.slice(1, -1).map(location => ({ location, stopover: true }));
+        const waypoints = selectedLocations.map(location => ({ location, stopover: true }));
 
         const request = {
-            origin: start,
-            destination: end,
+            origin: selectedLocations[0],
+            destination: selectedLocations[selectedLocations.length - 1],
             waypoints: waypoints,
             travelMode: 'WALKING', // Change to 'BICYCLING' if needed
-            optimizeWaypoints: true
+            optimizeWaypoints: true // Optimize the route to minimize travel time
         };
 
         directionsService.route(request, (result, status) => {
@@ -76,23 +74,33 @@ document.addEventListener('DOMContentLoaded', function() {
         let routeDetailsHTML = `
             <div class="route-summary">
                 <h2>Route Summary</h2>
-                <p class="route-distance">Total Distance: ${route.legs.reduce((acc, leg) => acc + leg.distance.value, 0) / 1000} km</p>
-                <p class="route-duration">Total Duration: ${route.legs.reduce((acc, leg) => acc + leg.duration.value, 0) / 60} minutes</p>
+                <p class="route-distance">Total Distance: ${(route.legs.reduce((acc, leg) => acc + leg.distance.value, 0) / 1000).toFixed(2)} km</p>
+                <p class="route-duration">Total Duration: ${(route.legs.reduce((acc, leg) => acc + leg.duration.value, 0) / 60).toFixed(2)} minutes</p>
             </div>
             <div class="route-instructions">
                 <h3>Instructions</h3>
                 <ol>`;
-        
-        route.legs.forEach(leg => {
-            leg.steps.forEach((step, index) => {
+
+        route.legs.forEach((leg, index) => {
+            routeDetailsHTML += `<li>
+                <p><strong>Leg ${index + 1}:</strong></p>
+                <p>Start: ${leg.start_address}</p>
+                <p>End: ${leg.end_address}</p>
+                <p>Distance: ${leg.distance.text}</p>
+                <p>Duration: ${leg.duration.text}</p>
+                <p>Steps:</p>
+                <ol>`;
+
+            leg.steps.forEach(step => {
                 routeDetailsHTML += `<li>${step.instructions}</li>`;
             });
+
+            routeDetailsHTML += `</ol></li>`;
         });
-        
+
         routeDetailsHTML += `</ol></div>`;
-    
+
         // Update route details section
         document.getElementById('route-details').innerHTML = routeDetailsHTML;
     }
-    
 });
