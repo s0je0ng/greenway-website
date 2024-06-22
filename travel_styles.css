@@ -358,10 +358,10 @@ header .fa-bars {
     }
 
     .description .content h3{
-        font-size: 5rem;
+        font-size: 2rem;
     }
     .description .content span{
-        font-size: 2rem;
+        font-size: .5rem;
     }
     .description .content p{
         font-size: 1rem;
