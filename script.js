@@ -49,14 +49,16 @@ document.addEventListener('DOMContentLoaded', function() {
             return;
         }
 
-        const waypoints = selectedLocations.map(location => ({ location, stopover: true }));
+        const start = selectedLocations[0];
+        const end = selectedLocations[selectedLocations.length - 1];
+        const waypoints = selectedLocations.slice(1, -1).map(location => ({ location, stopover: true }));
 
         const request = {
-            origin: selectedLocations[0],
-            destination: selectedLocations[selectedLocations.length - 1],
+            origin: start,
+            destination: end,
             waypoints: waypoints,
             travelMode: 'WALKING', // Change to 'BICYCLING' if needed
-            optimizeWaypoints: true // Optimize the route to minimize travel time
+            optimizeWaypoints: true
         };
 
         directionsService.route(request, (result, status) => {
