@@ -88,6 +88,7 @@ header .fa-bars {
     display: none;
 }
 
+
 .mytrip {
     display: flex;
     align-items: center;
@@ -135,23 +136,28 @@ header .fa-bars {
 
 .route-summary h2 {
     margin-top: 0;
+    font-size: 5rem;
 }
 
 .route-distance,
 .route-duration {
     font-weight: bold;
+    font-size: 3rem;
 }
 
 .route-instructions h3 {
     margin-top: 0;
+    font-size: 2rem;
 }
 
 .route-instructions ol {
     padding-left: 20px;
+    font-size: 1rem;
 }
 
 .route-instructions li {
     margin-bottom: 10px;
+    font-size: 1rem;
 }
 
 
