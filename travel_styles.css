@@ -154,16 +154,15 @@ header .fa-bars {
     margin-bottom:2rem;
 }
 
-.location .container .category h2{
-    font-size: 7rem;
+.location .container .category h3{
+    font-size: 5rem;
     color: #002060;
     border-bottom: 3px solid #ea6f2d;
     display: inline-block;
-    margin-bottom: 1rem;
 }
 
 .location .container .category p{
-    font-size: 5rem;
+    font-size: 2rem;
     color: #333;
     margin-bottom: 1rem;
 }
@@ -172,7 +171,7 @@ header .fa-bars {
     background: #eee;
     display: flex;
     flex-wrap: wrap;
-    gap: 1.5rem;
+    gap: 2rem;
     padding-top: 2rem;
     padding-bottom: 2rem;
 }
@@ -186,7 +185,7 @@ header .fa-bars {
     flex: 1 1 18rem;
     height: 4rem;
     text-align: center;
-    font-size: 1.2rem;
+    font-size: 2rem;
     color: #333;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 }
@@ -302,13 +301,7 @@ header .fa-bars {
     }
 }
 
-.location .container .category h2{
-    font-size: 3rem;
-}
 
-.location .container .category p{
-    font-size: 2rem;
-}
 
 @media (max-width: 768px) {
     header .fa-bars {
@@ -355,13 +348,6 @@ header .fa-bars {
     }
 }
 
-.location .container .category h2{
-    font-size: 2rem;
-}
-
-.location .container .category p{
-    font-size: 1rem;
-}
 
 
 
@@ -385,10 +371,3 @@ header .fa-bars {
     }
 }
 
-.location .container .category h2{
-    font-size: 2rem;
-}
-
-.location .container .category p{
-    font-size: 1rem;
-}
