@@ -82,7 +82,7 @@ document.addEventListener('DOMContentLoaded', function() {
             <div class="route-instructions">
                 <h3>Instructions</h3>
                 <ol>`;
-
+    
         route.legs.forEach((leg, index) => {
             routeDetailsHTML += `<li>
                 <p><strong>Leg ${index + 1}:</strong></p>
@@ -92,17 +92,17 @@ document.addEventListener('DOMContentLoaded', function() {
                 <p>Duration: ${leg.duration.text}</p>
                 <p>Steps:</p>
                 <ol>`;
-
+    
             leg.steps.forEach(step => {
                 routeDetailsHTML += `<li>${step.instructions}</li>`;
             });
-
+    
             routeDetailsHTML += `</ol></li>`;
         });
-
+    
         routeDetailsHTML += `</ol></div>`;
-
-        // Update route details section
+    
         document.getElementById('route-details').innerHTML = routeDetailsHTML;
     }
+    
 });

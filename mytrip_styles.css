@@ -121,22 +121,25 @@ header .fa-bars {
 .map-container {
     height: 400px; /* Adjust height as needed */
     margin: 20px auto;
+    padding: 2rem 9%;
 }
 
 .route-details {
-    padding: 20px;
     background-color: #f9f9f9;
     border: 1px solid #ddd;
     margin-top: 20px;
+    padding: 2rem 9%;
 }
 
 .route-summary {
     margin-bottom: 20px;
+    text-align: center;
+    padding: 2rem 9%;
 }
 
 .route-summary h2 {
     margin-top: 0;
-    font-size: 5rem;
+    font-size: 6rem;
 }
 
 .route-distance,
@@ -145,21 +148,35 @@ header .fa-bars {
     font-size: 3rem;
 }
 
+.route-instructions {
+    margin-bottom: 20px;
+    text-align: center;
+    padding: 2rem 9%;
+}
+
 .route-instructions h3 {
     margin-top: 0;
-    font-size: 2rem;
+    font-size: 3rem;
 }
 
 .route-instructions ol {
-    padding-left: 20px;
-    font-size: 1rem;
+    padding-left: 0;
+    list-style-position: inside;
+    font-size: 1.5rem;
 }
 
 .route-instructions li {
     margin-bottom: 10px;
-    font-size: 1rem;
+    font-size: 1.5rem;
 }
 
+.route-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
 
 
 .footer .box-container{
