@@ -145,7 +145,7 @@ header .fa-bars {
 .route-distance,
 .route-duration {
     font-weight: bold;
-    font-size: 3rem;
+    font-size: 4rem;
 }
 
 .route-instructions {
@@ -156,18 +156,18 @@ header .fa-bars {
 
 .route-instructions h3 {
     margin-top: 0;
-    font-size: 3rem;
+    font-size: 4rem;
 }
 
 .route-instructions ol {
     padding-left: 0;
     list-style-position: inside;
-    font-size: 1.5rem;
+    font-size: 3rem;
 }
 
 .route-instructions li {
     margin-bottom: 10px;
-    font-size: 1.5rem;
+    font-size: 2.5rem;
 }
 
 .route-container {
